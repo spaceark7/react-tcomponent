@@ -491,8 +491,10 @@ function InputFile(props) {
                 <Button
                   vendor='success'
                   onClick={() =>
-                    (window.location.href =
-                      process.env.REACT_APP_API_URL + '/file/download/' + val)
+                    window.open(
+                      process.env.REACT_APP_API_URL + '/file/stream/' + val,
+                      '_blank'
+                    )
                   }
                 >
                   <FontAwesomeIcon icon={faDownload} /> Unduh
