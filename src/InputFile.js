@@ -492,7 +492,7 @@ function InputFile(props) {
                   vendor='success'
                   onClick={() =>
                     window.open(
-                      process.env.REACT_APP_API_URL + '/file/stream/' + val,
+                      process.env.REACT_APP_API_URL + '/file/download/' + val,
                       '_blank'
                     )
                   }
