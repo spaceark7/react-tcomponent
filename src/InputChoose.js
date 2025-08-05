@@ -160,6 +160,9 @@ function InputChoose(props) {
 
           setInput(propsName, new_val)
         }
+        if (props.callback && typeof props.callback === 'function') {
+          props.callback()
+        }
       } catch (e) {
         setInput(propsName, null)
       }
