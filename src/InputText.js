@@ -62,8 +62,8 @@ function InputText(props) {
     placeholder = props?.placeholder || 'Kartu Indonesia Pintar'
   } else if (defaultType.toLowerCase() == 'npwp') {
     optionsCleave = {
-      delimiters: ['.', '.', '.', '-', '.'],
-      blocks: [2, 3, 3, 1, 3, 3],
+      delimiter: ' ',
+      blocks: [4, 4, 4, 4],
       numericOnly: true
     }
     placeholder = props?.placeholder || 'Nomor Pokok Wajib Pajak'
