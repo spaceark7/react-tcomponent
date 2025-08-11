@@ -146,8 +146,14 @@ function InputSelect(props) {
       try {
         if (props?.isMultiple) {
           setInput(propsName, map(selectedOption, props?.optionValue))
+          if (props.onChange && typeof props.onChange === 'function') {
+            props.onChange(selectedOption)
+          }
         } else {
           setInput(propsName, selectedOption[props?.optionValue])
+          if (props.onChange && typeof props.onChange === 'function') {
+            props.onChange(selectedOption)
+          }
         }
       } catch (e) {
         setInput(propsName, null)
