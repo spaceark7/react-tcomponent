@@ -310,6 +310,9 @@ function InputFile(props) {
     if (props.max_size && props.max_size > 0) {
       _data.append('max_size', props.max_size)
     }
+    if (props.only_type) {
+      _data.append('only_type', props.accept)
+    }
     _data.append('size', file.size)
 
     setLoading(true)
