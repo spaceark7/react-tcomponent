@@ -307,6 +307,10 @@ function InputFile(props) {
       moment(file.lastModifiedDate).format('YYYY-MM-DD HH:mm:ss')
     )
     _data.append('size', file.size)
+    if (props.max_size && props.max_size > 0) {
+      _data.append('max_size', props.max_size)
+    }
+    _data.append('size', file.size)
 
     setLoading(true)
 
